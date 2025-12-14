@@ -193,6 +193,7 @@ java -cp ".:mysql-connector-java-8.x.x.jar" InventoryManagementSystem
 ╚════════════════════════════════════════╝
 Enter your choice: 
 ```
+<img width="1920" height="1020" alt="Screenshot 2025-12-14 205044" src="https://github.com/user-attachments/assets/abefb98c-b730-4a00-a7d3-7933eee465d9" />
 
 ---
 
