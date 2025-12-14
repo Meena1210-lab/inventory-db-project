@@ -1,0 +1,43 @@
+erDiagram
+    SUPPLIERS ||--o{ PRODUCTS : supplies
+    PRODUCTS ||--o{ TRANSACTIONS : records
+    USERS ||--o{ TRANSACTIONS : performs
+    
+    SUPPLIERS {
+        int supplier_id PK
+        varchar supplier_name
+        varchar contact_person
+        varchar phone
+        varchar email
+        text address
+        timestamp created_at
+    }
+    
+    PRODUCTS {
+        int product_id PK
+        varchar product_name
+        varchar category
+        int quantity
+        int supplier_id FK
+        decimal unit_price
+        int reorder_level
+        timestamp created_at
+        timestamp updated_at
+    }
+    
+    TRANSACTIONS {
+        int transaction_id PK
+        int product_id FK
+        enum transaction_type
+        int quantity
+        timestamp transaction_date
+        text remarks
+    }
+    
+    USERS {
+        int user_id PK
+        varchar username
+        varchar password
+        enum role
+        timestamp created_at
+    }
